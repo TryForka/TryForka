@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAQ — Forka</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,6 +110,56 @@
     .nav-links { display: none; }
     .tabs-inner { gap: 8px; }
   }
+
+/* === HAMBURGER + MOBILE OVERLAY === */
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;flex-shrink:0;}
+.ham-bar{display:block;width:24px;height:2px;background:#0A2533;border-radius:2px;transition:transform .25s ease,opacity .25s ease;transform-origin:center;}
+.mobile-menu{position:fixed;inset:0;background:#fff;z-index:9999;transform:translateX(100%);transition:transform .25s ease-out;display:flex;flex-direction:column;overflow-y:auto;}
+.mobile-menu.open{transform:translateX(0);}
+.mobile-menu-header{display:flex;align-items:center;justify-content:space-between;padding:15px 24px;height:72px;border-bottom:1px solid #f0f0f0;flex-shrink:0;}
+.mobile-close{background:none;border:none;cursor:pointer;padding:8px;display:flex;align-items:center;justify-content:center;width:44px;height:44px;}
+.mobile-nav{display:flex;flex-direction:column;align-items:center;padding:32px 24px 0;gap:8px;height:auto!important;position:static!important;box-shadow:none!important;background:transparent!important;z-index:auto!important;}
+.mobile-nav-link{font-family:'Poppins',sans-serif;font-weight:600;font-size:24px;color:#0A2533;text-decoration:none;padding:16px 0;width:100%;text-align:center;}
+.mobile-nav-link.active{font-weight:800;}
+.mobile-menu-btns{display:flex;flex-direction:column;gap:12px;padding:32px 24px;}
+.mobile-btn-login{display:block;width:100%;padding:16px;text-align:center;font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#0A2533;background:#fff;border:1.5px solid #0A2533;border-radius:12px;text-decoration:none;}
+.mobile-btn-signup{display:block;width:100%;padding:16px;text-align:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:#fff;background:#1F8F63;border-radius:12px;text-decoration:none;}
+
+@media(max-width:767px){
+  .hamburger{display:flex;}
+  .nav-links{display:none!important;}
+  .nav-search{display:none!important;}
+  .nav-actions .btn{display:none!important;}
+  body.menu-open{overflow:hidden;}
+  body.menu-open .ham-bar:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  body.menu-open .ham-bar:nth-child(2){opacity:0;}
+  body.menu-open .ham-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  /* Hero */
+  .hero{padding:56px 20px;}
+  .hero h1{font-size:36px;}
+  .search-bar{max-width:100%;}
+  /* Category tabs — scrollable row */
+  .tabs-bar{padding:16px 20px;}
+  .tabs-inner{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px;}
+  .tabs-inner::-webkit-scrollbar{display:none;}
+  .tab-btn{white-space:nowrap;flex-shrink:0;}
+  /* FAQ */
+  .faq-section{padding:40px 0 56px;}
+  .faq-inner{padding-left:20px;padding-right:20px;}
+  .faq-group-title{font-size:18px;}
+  /* Help section */
+  .help-section{padding:56px 20px;}
+  .help-section h2{font-size:26px;}
+  .help-btns{flex-direction:column;align-items:stretch;}
+  .help-btns .btn{width:100%;justify-content:center;}
+  /* CTA */
+  .cta-banner h2{font-size:28px;}
+  .cta-btns{flex-direction:column;align-items:stretch;padding:0 20px;}
+  .cta-btns .btn{width:100%;justify-content:center;}
+  /* Footer */
+  .footer-inner{grid-template-columns:1fr!important;gap:32px;padding-left:20px;padding-right:20px;}
+  .footer-bottom-inner{flex-direction:column;text-align:center;gap:12px;padding-left:20px;padding-right:20px;}
+}
 </style>
 </head>
 <body>
@@ -133,9 +184,38 @@
       </button>
       <a href="login.html" class="btn btn-outline">Log in</a>
       <!-- WAITLIST START: to remove, change href back to "signup.html", class back to "btn btn-green", text back to "Try Forka" --><a href="waitlist.html" class="btn btn-orange">Join Waitlist</a><!-- WAITLIST END -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon" style="background:transparent;">
+        <img src="uploads/pasted-1777438996972-0.png" alt="Forka" style="width:100%;height:100%;object-fit:contain;border-radius:10px;">
+      </div>
+    </a>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A2533" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="features.html" class="mobile-nav-link">Features</a>
+    <a href="blog.html" class="mobile-nav-link">Blog</a>
+    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+  </nav>
+  <div class="mobile-menu-btns">
+    <a href="login.html" class="mobile-btn-login">Log in</a>
+    <a href="signup.html" class="mobile-btn-signup">Try Forka</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -316,7 +396,6 @@
     <div>
       <h4 class="footer-col-title">Company</h4>
       <ul class="footer-links">
-        <li><a href="about.html">About</a></li>
         <li><a href="#">Careers</a></li>
       </ul>
     </div>
@@ -334,5 +413,16 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn=document.getElementById('hamburgerBtn');
+  var menu=document.getElementById('mobileMenu');
+  var close=document.getElementById('mobileClose');
+  function openMenu(){menu.classList.add('open');document.body.classList.add('menu-open');btn.setAttribute('aria-expanded','true');btn.setAttribute('aria-label','Close menu');menu.setAttribute('aria-hidden','false');}
+  function closeMenu(){menu.classList.remove('open');document.body.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Open menu');menu.setAttribute('aria-hidden','true');}
+  btn.addEventListener('click',function(){menu.classList.contains('open')?closeMenu():openMenu();});
+  close.addEventListener('click',closeMenu);
+})();
+</script>
 </body>
 </html>
