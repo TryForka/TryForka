@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Forka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: #0A2533; overflow-x: hidden; }
+
+  nav { background: #fff; height: 72px; display: flex; align-items: center; box-shadow: 0 1px 0 rgba(0,0,0,0.07); position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1180px; margin: 0 auto; padding: 0 24px; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a { text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; color: #5A6B73; transition: color .2s; }
+  .nav-links a.active, .nav-links a:hover { color: #0A2533; font-weight: 700; }
+  .nav-actions { display: flex; align-items: center; gap: 12px; }
+  .nav-search { background: none; border: none; cursor: pointer; padding: 6px; color: #5A6B73; display: flex; align-items: center; }
+  .btn { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 8px; border: none; cursor: pointer; transition: all .2s; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+  .btn-outline { background: #fff; border: 1.5px solid #0A2533; color: #0A2533; }
+  .btn-outline:hover { background: #f5f7f8; }
+  .btn-green { background: #1F8F63; color: #fff; }
+  .btn-green:hover { background: #166b4a; }
+  .btn-orange { background: #FF6B35; color: #fff; }
+  .btn-orange:hover { background: #e85a24; transform: translateY(-1px); }
+  .btn-white-outline { background: transparent; border: 2px solid rgba(255,255,255,0.7); color: #fff; padding: 12px 28px; }
+  .btn-white-outline:hover { background: rgba(255,255,255,0.15); }
+
+  .eyebrow { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13px; color: #1F8F63; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  .green { color: #1F8F63; }
+  .section-underline { width: 80px; height: 3px; background: #1F8F63; border-radius: 2px; margin: 0 auto 32px; }
+
+  /* HERO */
+  .hero { background: #F5F7F8; padding: 80px 24px; text-align: center; }
+  .hero h1 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 52px; line-height: 1.1; color: #0A2533; margin-bottom: 18px; }
+  .hero-sub { font-size: 17px; color: #5A6B73; max-width: 580px; margin: 0 auto 36px; line-height: 1.7; }
+  .search-bar { max-width: 500px; margin: 0 auto; display: flex; background: #fff; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); overflow: hidden; border: 1.5px solid #e8eaec; }
+  .search-bar input { flex: 1; padding: 16px 20px; font-family: 'DM Sans', sans-serif; font-size: 15px; border: none; outline: none; color: #0A2533; background: transparent; }
+  .search-bar input::placeholder { color: #9AABBA; }
+  .search-icon { padding: 0 18px; display: flex; align-items: center; color: #5A6B73; }
+
+  /* TABS */
+  .tabs-bar { background: #fff; padding: 20px 24px; border-bottom: 1px solid #f0f0f0; }
+  .tabs-inner { max-width: 800px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .tab-btn { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; padding: 8px 20px; border-radius: 100px; border: 1.5px solid #e0e4e8; background: #fff; color: #0A2533; cursor: pointer; transition: all .2s; text-decoration: none; }
+  .tab-btn:hover { border-color: #1F8F63; color: #1F8F63; }
+  .tab-btn.active { background: #1F8F63; color: #fff; border-color: #1F8F63; }
+
+  /* FAQ ACCORDION */
+  .faq-section { background: #fff; padding: 64px 0 80px; }
+  .faq-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+  .faq-group { margin-bottom: 48px; }
+  .faq-group-title { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 20px; color: #0A2533; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #e8f5ee; }
+  .faq-list { display: flex; flex-direction: column; gap: 10px; }
+  details { background: #fff; border-radius: 12px; border: 1px solid #e8eaec; overflow: hidden; transition: box-shadow .2s; }
+  details:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+  details[open] { border-color: #1F8F63; box-shadow: 0 2px 12px rgba(31,143,99,0.1); }
+  details summary { padding: 20px 24px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; color: #0A2533; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  details summary::-webkit-details-marker { display: none; }
+  .faq-toggle { width: 28px; height: 28px; border-radius: 50%; background: #F5F7F8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; font-weight: 400; color: #1F8F63; line-height: 1; transition: background .2s, transform .2s; }
+  details[open] .faq-toggle { background: #1F8F63; color: #fff; transform: rotate(45deg); }
+  .faq-answer { padding: 0 24px 20px; font-size: 15px; color: #5A6B73; line-height: 1.75; border-top: 1px solid #f0f5f2; padding-top: 16px; }
+
+  /* STILL NEED HELP */
+  .help-section { background: #F5F7F8; padding: 80px 24px; text-align: center; }
+  .help-section h2 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 32px; color: #0A2533; margin-bottom: 12px; }
+  .help-section p { font-size: 16px; color: #5A6B73; margin-bottom: 32px; }
+  .help-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* CTA */
+  .cta-banner { background: #1F8F63; position: relative; overflow: hidden; padding: 80px 24px; text-align: center; }
+  .cta-banner h2 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 36px; color: #fff; margin-bottom: 14px; }
+  .cta-banner p { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .cta-veg { position: absolute; inset: 0; opacity: 0.1; pointer-events: none; }
+
+  /* FOOTER */
+  footer { background: #1F8F63; position: relative; overflow: hidden; padding: 64px 0 0; }
+  .footer-veg-bg { position: absolute; inset: 0; opacity: 0.08; pointer-events: none; }
+  .footer-inner { max-width: 1180px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 48px; position: relative; z-index: 1; }
+  .footer-logo-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .footer-logo-icon { width: 36px; height: 36px; background: rgba(255,255,255,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+  .footer-brand-name { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 18px; color: #fff; }
+  .footer-brand-desc { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.65; margin-bottom: 20px; }
+  .social-icons { display: flex; gap: 10px; }
+  .social-icon { width: 34px; height: 34px; border: 1.5px solid rgba(255,255,255,0.4); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #fff; transition: background .2s; text-decoration: none; }
+  .social-icon:hover { background: rgba(255,255,255,0.15); }
+  .social-icon svg { width: 16px; height: 16px; fill: #fff; }
+  .footer-col-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 16px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 13px; color: rgba(255,255,255,0.75); text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: #fff; }
+  .footer-contact-item { font-size: 13px; color: rgba(255,255,255,0.75); margin-bottom: 8px; line-height: 1.5; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); margin-top: 48px; padding: 18px 0; position: relative; z-index: 1; }
+  .footer-bottom-inner { max-width: 1180px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.65); }
+  .footer-legal { display: flex; gap: 20px; }
+  .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.65); text-decoration: none; }
+  .footer-legal a:hover { color: #fff; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .tabs-inner { gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon" style="background:transparent;">
+        <img src="uploads/pasted-1777438996972-0.png" alt="Forka logo" style="width:100%;height:100%;object-fit:contain;border-radius:10px;">
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-search" aria-label="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <a href="login.html" class="btn btn-outline">Log in</a>
+      <!-- WAITLIST START: to remove, change href back to "signup.html", class back to "btn btn-green", text back to "Try Forka" --><a href="waitlist.html" class="btn btn-orange">Join Waitlist</a><!-- WAITLIST END -->
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="eyebrow">HELP CENTER</p>
+  <h1>How can we help?</h1>
+  <p class="hero-sub">Quick answers to the most common questions about Forka.</p>
+  <div class="search-bar">
+    <span class="search-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </span>
+    <input type="text" placeholder="Search for an answer...">
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tabs-bar">
+  <div class="tabs-inner">
+    <a href="#all" class="tab-btn active">All</a>
+    <a href="#getting-started" class="tab-btn">Getting Started</a>
+    <a href="#meal-plans" class="tab-btn">Meal Plans</a>
+    <a href="#pricing-billing" class="tab-btn">Pricing &amp; Billing</a>
+    <a href="#cooking-recipes" class="tab-btn">Cooking &amp; Recipes</a>
+  </div>
+</div>
+
+<!-- FAQ ACCORDION -->
+<section class="faq-section" id="all">
+  <div class="faq-inner">
+
+    <!-- GETTING STARTED -->
+    <div class="faq-group" id="getting-started">
+      <h2 class="faq-group-title">Getting Started</h2>
+      <div class="faq-list">
+        <details>
+          <summary>How do I sign up for Forka? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Just download the app or sign up at tryforka.com, answer a few quick questions about your dietary preferences and family size, and you're ready to go.</div>
+        </details>
+        <details>
+          <summary>Is Forka available on iOS and Android? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Yes! Forka is available on both the App Store and Google Play.</div>
+        </details>
+        <details>
+          <summary>Do I need a credit card to start? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">No. The 2-week free trial requires no payment info to begin.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- MEAL PLANS -->
+    <div class="faq-group" id="meal-plans">
+      <h2 class="faq-group-title">Meal Plans</h2>
+      <div class="faq-list">
+        <details>
+          <summary>How does the AI build my meal plan? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Forka analyzes your dietary preferences, allergies, household size, weekly schedule, and past recipe ratings to generate a personalized 7-day plan in under 10 seconds.</div>
+        </details>
+        <details>
+          <summary>Can I customize my meal plan? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Absolutely. Swap any meal, lock favorites, regenerate single days, or build a plan completely from scratch.</div>
+        </details>
+        <details>
+          <summary>What dietary restrictions does Forka support? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Vegan, vegetarian, keto, paleo, gluten-free, dairy-free, low-carb, Mediterranean, pescatarian, halal, kosher, and major allergies.</div>
+        </details>
+        <details>
+          <summary>How far ahead can I plan? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Plan up to 4 weeks at a time.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- PRICING & BILLING -->
+    <div class="faq-group" id="pricing-billing">
+      <h2 class="faq-group-title">Pricing &amp; Billing</h2>
+      <div class="faq-list">
+        <details>
+          <summary>How much does Forka cost? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">$9.99/month after a 2-week free trial. Cancel anytime.</div>
+        </details>
+        <details>
+          <summary>Can I cancel my subscription? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Yes. Cancel anytime from your account settings.</div>
+        </details>
+        <details>
+          <summary>Will I be charged automatically after the trial? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Only if you've added a payment method. We'll always remind you 3 days before the trial ends.</div>
+        </details>
+        <details>
+          <summary>Do you offer refunds? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">If you're unsatisfied within the first 30 days of paid service, contact us for a full refund.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- COOKING & RECIPES -->
+    <div class="faq-group" id="cooking-recipes">
+      <h2 class="faq-group-title">Cooking &amp; Recipes</h2>
+      <div class="faq-list">
+        <details>
+          <summary>How many recipes does Forka have? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Over 50,000 recipes from trusted sources, all with full nutrition info, photos, and step-by-step instructions.</div>
+        </details>
+        <details>
+          <summary>Can I save my favorite recipes? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Yes. Tap the heart icon on any recipe to add it to your favorites.</div>
+        </details>
+        <details>
+          <summary>Does the cook mode keep my screen on? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Yes. While in cook mode, your screen stays on so you never get locked mid-recipe.</div>
+        </details>
+        <details>
+          <summary>Can I add my own recipes? <span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">Custom recipe import is coming soon. For now, you can favorite and rate any recipe in our library.</div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STILL NEED HELP -->
+<section class="help-section">
+  <h2>Still have questions?</h2>
+  <div class="section-underline" style="margin:12px auto 20px;"></div>
+  <p>Our team responds within 24 hours.</p>
+  <div class="help-btns">
+    <a href="mailto:Frokabusiness@gmail.com" class="btn btn-orange" style="padding:13px 28px;">Email Support</a>
+    <a href="#" class="btn btn-outline" style="padding:13px 28px;">Visit Help Center</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <svg class="cta-veg" viewBox="0 0 1440 300" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(80,60) rotate(-20)"><ellipse cx="0" cy="20" rx="6" ry="18" stroke="white" fill="none" stroke-width="1.5"></ellipse><line x1="0" y1="2" x2="-10" y2="-14" stroke="white" stroke-width="1.5"></line><line x1="0" y1="2" x2="0" y2="-16" stroke="white" stroke-width="1.5"></line><line x1="0" y1="2" x2="10" y2="-14" stroke="white" stroke-width="1.5"></line></g>
+    <g transform="translate(700,40) rotate(30)"><path d="M0,0 Q20,-30 40,0 Q20,10 0,0Z" stroke="white" fill="none" stroke-width="1.5"></path><line x1="0" y1="0" x2="40" y2="0" stroke="white" stroke-width="1"></line></g>
+    <g transform="translate(1350,50) rotate(15)"><ellipse cx="0" cy="24" rx="8" ry="22" stroke="white" fill="none" stroke-width="2"></ellipse><line x1="0" y1="2" x2="-12" y2="-18" stroke="white" stroke-width="2"></line><line x1="0" y1="2" x2="0" y2="-20" stroke="white" stroke-width="2"></line><line x1="0" y1="2" x2="12" y2="-18" stroke="white" stroke-width="2"></line></g>
+  </svg>
+  <div style="position:relative;z-index:1;">
+    <h2>Ready to make dinner easy?</h2>
+    <p>Join 248+ families using Forka to plan smarter meals.</p>
+    <div class="cta-btns">
+      <a href="signup.html" class="btn btn-orange" style="padding:14px 32px;font-size:15px;">Try Forka Free</a>
+      <a href="features.html" class="btn btn-white-outline">See How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <svg class="footer-veg-bg" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(80,80) rotate(-20)"><ellipse cx="0" cy="24" rx="8" ry="22" stroke="white" fill="none" stroke-width="2"></ellipse><line x1="0" y1="2" x2="-12" y2="-18" stroke="white" stroke-width="2"></line><line x1="0" y1="2" x2="0" y2="-20" stroke="white" stroke-width="2"></line><line x1="0" y1="2" x2="12" y2="-18" stroke="white" stroke-width="2"></line></g>
+    <g transform="translate(400,60)"><rect x="-3" y="0" width="6" height="22" stroke="white" fill="none" stroke-width="2"></rect><circle cx="-14" cy="-6" r="12" stroke="white" fill="none" stroke-width="2"></circle><circle cx="0" cy="-12" r="14" stroke="white" fill="none" stroke-width="2"></circle><circle cx="14" cy="-6" r="12" stroke="white" fill="none" stroke-width="2"></circle></g>
+    <g transform="translate(700,100) rotate(20)"><path d="M0,0 Q24,-36 48,0 Q24,12 0,0Z" stroke="white" fill="none" stroke-width="2"></path><line x1="0" y1="0" x2="48" y2="0" stroke="white" stroke-width="1.5"></line></g>
+    <g transform="translate(1050,60) rotate(-10)"><ellipse cx="0" cy="0" rx="18" ry="24" stroke="white" fill="none" stroke-width="2"></ellipse><line x1="0" y1="-24" x2="0" y2="-36" stroke="white" stroke-width="2"></line></g>
+  </svg>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <div class="footer-logo-icon"><img src="uploads/pasted-1777438996972-0.png" alt="Forka logo" style="width:100%;height:100%;object-fit:contain;border-radius:6px;"></div>
+        <span class="footer-brand-name">Forka</span>
+      </div>
+      <p class="footer-brand-desc">Follow us and never miss an update on the latest meal planning tips, tools, and family recipes.</p>
+      <div class="social-icons">
+        
+        <a href="https://www.instagram.com/tryforka/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Learn</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Company</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Contact</h4>
+      <p class="footer-contact-item">Frokabusiness@gmail.com</p>
+      <p class="footer-contact-item">Glenview, Illinois</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span class="footer-copy">© 2026 Forka. All rights reserved.</span>
+      <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

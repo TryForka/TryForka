@@ -1,0 +1,91 @@
+Forka Terms of Use
+Effective Date: April 30, 2026  |  Last Updated: April 30, 2026
+PLEASE READ THESE TERMS OF USE CAREFULLY. THEY CONTAIN A BINDING ARBITRATION PROVISION AND A CLASS ACTION WAIVER (SECTION 16) THAT AFFECT YOUR LEGAL RIGHTS.
+These Terms of Use ("Terms") form a binding agreement between you ("you" or "User") and Forka LLC ("Forka," "we," "us," or "our") and govern your access to and use of the Forka mobile and web application, related websites, and any associated features and services (collectively, the "Service").
+By creating an account, accessing, or using the Service, you agree to be bound by these Terms and by our Privacy Policy, which is incorporated by reference. If you do not agree to these Terms, do not use the Service.
+1. Eligibility and Account Registration
+You must be at least 13 years old to use the Service. If you are located in the European Economic Area or the United Kingdom, you must be at least 16 years old, or have the consent of a parent or legal guardian. By using the Service, you represent and warrant that you meet these age requirements and that you have the legal capacity to enter into these Terms.
+To access most features, you must create an account using your email address and a password, or by signing in through Google or Facebook. You agree to provide accurate, current, and complete information during registration and to keep that information up to date. You are responsible for safeguarding your password and for all activity that occurs under your account. Notify us promptly at forkabusiness@gmail.com if you suspect unauthorized use of your account.
+2. License to Use the Service
+Subject to your compliance with these Terms, Forka grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the Service for your personal, non-commercial use. All rights not expressly granted in these Terms are reserved by Forka.
+3. Acceptable Use
+You agree not to do any of the following:
+•Use the Service in violation of any applicable law, regulation, or third-party right.
+•Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code of the Service, except as permitted by applicable law.
+•Copy, modify, distribute, sell, lease, or create derivative works of the Service or any portion of it.
+•Use any automated system, including bots, scrapers, or crawlers, to access the Service or extract data from it.
+•Interfere with or disrupt the Service, the servers or networks used to provide the Service, or any third-party service connected to the Service.
+•Attempt to gain unauthorized access to any part of the Service, other user accounts, or any related systems or networks.
+•Upload, transmit, or otherwise make available any content that is unlawful, harmful, infringing, defamatory, harassing, obscene, or that contains viruses or other malicious code.
+•Use the Service to develop or train any artificial intelligence or machine learning model.
+•Resell, sublicense, or otherwise commercially exploit the Service or any of its content without our prior written consent.
+4. User Content
+The Service allows you to create, save, and store content such as meal plans, favorite recipes, shopping lists, notes, ratings, and feedback ("User Content"). You retain ownership of your User Content.
+By submitting User Content to the Service, you grant Forka a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to host, store, reproduce, modify, and display your User Content solely as necessary to operate, provide, and improve the Service. This license ends when you delete your User Content or your account, except that we may retain copies as needed to comply with legal obligations or for backup purposes.
+You are solely responsible for your User Content. You represent and warrant that you have all rights necessary to submit it and that your User Content does not violate these Terms or any third-party rights.
+5. Recipe Content and Third-Party Data
+Recipes, nutritional information, images, and related content displayed in the Service are provided by third-party data sources, including Spoonacular. Forka does not own this content and does not guarantee its accuracy, completeness, or suitability for any particular purpose. You should always read ingredient labels, verify allergen information, and consult a qualified professional before relying on any recipe or nutritional information for health-related decisions.
+Recipe images, names, and instructions may be subject to copyright held by third parties and are provided for your personal, non-commercial use within the Service.
+6. Health, Allergy, and Nutritional Disclaimer
+FORKA IS NOT A MEDICAL OR NUTRITIONAL PROVIDER.
+The Service offers meal planning and grocery suggestions based on the dietary preferences, allergies, and dislikes you provide. This information is for general informational purposes only and is not a substitute for professional medical, nutritional, or dietary advice, diagnosis, or treatment.
+Although we use the dietary preferences and allergies you provide to filter and personalize recipe suggestions, we cannot guarantee that any recipe is free from any particular ingredient, allergen, or contaminant. Ingredient lists, preparation methods, and cross-contamination risks are outside our control. If you have a food allergy, intolerance, or medical condition, you must independently verify every ingredient before purchasing or consuming any food. Always consult a qualified healthcare professional regarding any health, dietary, or nutritional concerns.
+You acknowledge and agree that you use any meal plan, recipe, or grocery list generated by the Service at your own risk.
+7. Grocery Fulfillment and Third-Party Services
+Forka may allow you to send your shopping list to third-party grocery fulfillment partners for purchase and delivery. When you choose to do so, your interaction with that partner is governed by the partner’s own terms of service and privacy policy. Forka is not a party to your transaction with any third-party fulfillment partner and is not responsible for the availability, quality, pricing, substitution, delivery, or refund of any items you purchase through them.
+The Service may also contain links to or integrations with other third-party websites, services, or content. We do not control, endorse, or assume responsibility for any third-party services or content. Your use of any third-party service is at your own risk and subject to that third party’s terms.
+8. Subscriptions, Payments, and Free Tier
+8.1 Free and Paid Plans
+Forka offers a free tier and a paid subscription tier ("Forka Pro"). Features available on each tier are described in the Service and may change from time to time.
+8.2 Billing
+If you subscribe to Forka Pro, you authorize Forka and its payment processor, Stripe, to charge the payment method you provide for the subscription fee and any applicable taxes. Subscription fees are billed in advance on a recurring basis (monthly or annually, as you select) and are non-refundable except as expressly stated in these Terms or as required by applicable law.
+8.3 Automatic Renewal
+Your Forka Pro subscription will automatically renew at the end of each billing period at the then-current rate, unless you cancel before the renewal date. You can cancel at any time through your account settings or by contacting forkabusiness@gmail.com. Cancellation takes effect at the end of the current billing period; you will retain access to Forka Pro features until then.
+8.4 Price Changes
+We may change subscription prices from time to time. Any price change will take effect at the start of your next billing period after we provide you with notice. If you do not agree to a price change, you may cancel your subscription before the change takes effect.
+8.5 Refunds
+Except as required by applicable law, all payments are final and non-refundable. If you are located in a jurisdiction that grants statutory withdrawal or refund rights, those rights apply.
+9. Intellectual Property
+The Service, including all software, design, graphics, text, logos, trademarks, and other content (excluding User Content and third-party content), is owned by Forka or its licensors and is protected by intellectual property laws. The "Forka" name and logo are trademarks of Forka LLC. You may not use them without our prior written permission.
+We welcome your feedback, suggestions, and ideas about the Service ("Feedback"). By submitting Feedback, you grant Forka a perpetual, irrevocable, worldwide, royalty-free license to use it for any purpose without obligation to you.
+10. Privacy
+Your use of the Service is also governed by our Privacy Policy, which describes how we collect, use, and share your information. Please review the Privacy Policy carefully.
+11. Termination
+You may stop using the Service at any time and may delete your account through the in-app settings or by contacting us at support@forka.app.
+We may suspend or terminate your access to the Service at any time, with or without notice, if we reasonably believe you have violated these Terms, if your account has been inactive for an extended period, if required by law, or if we discontinue the Service. Upon termination, your right to use the Service ends immediately. Sections that by their nature should survive termination (including Sections 4, 5, 6, 9, 12, 13, 14, 15, and 16) will survive.
+12. Disclaimer of Warranties
+THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY. TO THE FULLEST EXTENT PERMITTED BY LAW, FORKA DISCLAIMS ALL WARRANTIES, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND ANY WARRANTIES ARISING OUT OF COURSE OF DEALING OR USAGE OF TRADE.
+Without limiting the foregoing, Forka does not warrant that the Service will be uninterrupted, secure, error-free, or free of viruses or other harmful components, that recipes or nutritional information will be accurate or complete, that meal suggestions will satisfy your dietary or health needs, or that defects will be corrected. Some jurisdictions do not allow the exclusion of certain warranties, so some of the above exclusions may not apply to you.
+13. Limitation of Liability
+TO THE FULLEST EXTENT PERMITTED BY LAW, FORKA AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, AND LICENSORS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR USE OF OR INABILITY TO USE THE SERVICE, EVEN IF FORKA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+FORKA’S TOTAL LIABILITY ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICE WILL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID FORKA IN THE TWELVE MONTHS BEFORE THE EVENT GIVING RISE TO THE LIABILITY, OR (B) ONE HUNDRED U.S. DOLLARS ($100).
+Some jurisdictions do not allow the exclusion or limitation of certain damages, so the above limitations may not apply to you in full. Nothing in these Terms limits liability that cannot be limited under applicable law.
+14. Indemnification
+You agree to defend, indemnify, and hold harmless Forka and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or in any way connected with (a) your access to or use of the Service, (b) your User Content, (c) your violation of these Terms, or (d) your violation of any law or third-party right.
+15. Governing Law and Venue
+These Terms are governed by the laws of the State of Illinois, without regard to its conflict-of-laws principles. Subject to Section 16, any dispute arising out of or relating to these Terms or the Service that is not subject to arbitration will be resolved exclusively in the state or federal courts located in Cook County, Illinois, and you consent to the personal jurisdiction of those courts.
+16. Arbitration Agreement and Class Action Waiver
+Please read this section carefully. It requires you to arbitrate disputes with Forka and limits the manner in which you can seek relief from us.
+16.1 Binding Arbitration
+You and Forka agree that any dispute, claim, or controversy arising out of or relating to these Terms or the Service will be resolved by binding individual arbitration administered by the American Arbitration Association ("AAA") under its Consumer Arbitration Rules, rather than in court, except that you may bring claims in small-claims court if your claims qualify. The arbitration will take place in Cook County, Illinois, or, at your election, by telephone or video, or in the U.S. county where you live. Judgment on the award may be entered in any court of competent jurisdiction.
+16.2 Class Action Waiver
+YOU AND FORKA AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, OR REPRESENTATIVE PROCEEDING. THE ARBITRATOR MAY NOT CONSOLIDATE MORE THAN ONE PERSON’S CLAIMS OR PRESIDE OVER ANY FORM OF REPRESENTATIVE PROCEEDING.
+16.3 Opt-Out
+You may opt out of this arbitration agreement by sending written notice to forkabusiness@gmail.com within 30 days of first accepting these Terms. Your notice must include your name, the email address associated with your account, and a clear statement that you wish to opt out of arbitration. Opting out will not affect any other provision of these Terms.
+16.4 Exceptions
+Nothing in this section prevents either party from seeking injunctive or other equitable relief in court for the infringement or misappropriation of intellectual property rights or for unauthorized access to the Service.
+17. Changes to These Terms
+We may update these Terms from time to time. When we make material changes, we will notify you by email or through a prominent notice in the Service before the changes take effect, and we will update the "Last Updated" date above. Your continued use of the Service after the effective date of the updated Terms constitutes acceptance of the changes. If you do not agree to the updated Terms, you must stop using the Service.
+18. Miscellaneous
+•Entire Agreement. These Terms and the Privacy Policy constitute the entire agreement between you and Forka regarding the Service and supersede any prior agreements.
+•Severability. If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect.
+•No Waiver. Our failure to enforce any provision of these Terms is not a waiver of our right to do so later.
+•Assignment. You may not assign or transfer these Terms without our prior written consent. We may assign these Terms at any time without notice.
+•Force Measure. Forka will not be liable for any failure or delay in performance caused by events beyond our reasonable control, including natural disasters, acts of government, labor disputes, internet outages, or third-party service failures.
+•Notices. We may provide notices to you by email, in-app message, or by posting on the Service. You may send notices to us at forkabusiness@gmail.com.
+•Headings. Section headings are for convenience only and do not affect interpretation.
+19. Contact Us
+If you have any questions about these Terms, please contact us at:
+Forka LLC
+Email: forkabusiness@gmail.com
+Mailing address: forkabusiness@gmail.com
