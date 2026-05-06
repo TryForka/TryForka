@@ -151,10 +151,6 @@
         <p class="card-sub">Reserve your spot for early access and launch-day pricing.</p>
         <form id="waitlist-form" novalidate="">
           <div class="form-group">
-            <label for="waitlist-name">Your Name <span style="font-weight:400;text-transform:none;color:#9AABBA;">(optional)</span></label>
-            <input type="text" id="waitlist-name" placeholder="Sarah Mitchell">
-          </div>
-          <div class="form-group">
             <label for="waitlist-email">Email Address</label>
             <input type="email" id="waitlist-email" placeholder="you@example.com" required="">
           </div>
@@ -190,7 +186,6 @@
   document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('waitlist-email').value.trim();
-    const name  = document.getElementById('waitlist-name').value.trim() || null;
     const msgEl = document.getElementById('waitlist-message');
     const btn   = e.target.querySelector('button[type="submit"]');
 
@@ -199,7 +194,7 @@
 
     const { error } = await supabase
       .from('waitlist')
-      .insert([{ email, name, source: 'marketing_site' }]);
+      .insert([{ email, source: 'marketing_site' }]);
 
     btn.disabled = false;
 
