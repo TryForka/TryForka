@@ -90,7 +90,7 @@ export function Settings() {
     <PageContainer title="Settings" actions={<SaveStatus state={state} />}>
       <Section id="household" title="Household">
         <div className="grid max-w-xl gap-5">
-          <Input label="Household name" placeholder="The Garcias" value={draft.household_name} onChange={e => editProfile({ household_name: e.target.value })} />
+          <Input label="Household name" placeholder="The Millers" value={draft.household_name} onChange={e => editProfile({ household_name: e.target.value })} />
           <div>
             <p className="mb-2 text-sm font-semibold text-ink">People</p>
             <Stepper label="People" value={draft.household_size} min={1} max={12} unit={n => (n === 1 ? 'person' : 'people')}
