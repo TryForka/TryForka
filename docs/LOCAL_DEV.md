@@ -1,9 +1,13 @@
 # Local development: website + app on one origin
 
-The app runs at `/app/` and the website (login, signup, marketing pages) at `/`, on the
-same origin. That matters: Supabase keeps the session in `localStorage`, which is per
-origin, so the website and the app must share one. Two ports (say 5173 and 8080) are two
-origins, and the app would never see the website's login.
+One repo holds both:
+
+- the app at the root (`src/`, `package.json`, Vite), served at `/app/`
+- the marketing website in `website/` (plain HTML), served at `/`
+
+They must share one origin. Supabase keeps the session in `localStorage`, which is per
+origin, so the website's login only works for the app on the same origin. Two ports (say
+5173 and 8080) are two origins, and the app would never see the website's login.
 
 ## Run it
 
@@ -12,22 +16,16 @@ npm install
 npm run dev
 ```
 
-Then open **http://localhost:5173/** (the website) or **http://localhost:5173/app/** (the app).
+Open **http://localhost:5173/** for the website, or **http://localhost:5173/app/** for the app.
 
 The dev server serves both:
 
 - `/app/...` is the Vite app (`base: '/app/'` in `vite.config.ts`).
-- Everything else is a static file from the website folder, served by the dev-only
-  `forka-serve-website` plugin in `vite.config.ts`. `/` serves `index.html`.
+- Everything else is a static file from `website/`, served by the dev-only
+  `forka-serve-website` plugin in `vite.config.ts`. `/` serves `website/index.html`.
 
-The website folder defaults to `./TryForka-mainWebsite` (git-ignored here; it is its own
-repo). If your checkout of the `TryForka` repo lives somewhere else, point at it:
-
-```bash
-FORKA_WEBSITE_DIR=../TryForka npm run dev
-```
-
-If the folder isn't found the dev server still starts, logs a warning and serves only `/app/`.
+To serve the website from another folder, set `FORKA_WEBSITE_DIR`, for example
+`FORKA_WEBSITE_DIR=../somewhere npm run dev`.
 
 ## What to expect
 
@@ -36,14 +34,19 @@ If the folder isn't found the dev server still starts, logs a warning and serves
 - Sign out in the app (Settings) and you land on `/`.
 
 Supabase must allow the local redirect URLs: add `http://localhost:5173/**` under
-Authentication → URL Configuration → Redirect URLs (see `docs/WEBSITE_LINK_REPORT.md`).
+Authentication → URL Configuration → Redirect URLs.
 
-## Production build
+## Production build (what Vercel runs)
 
 ```bash
-npm run build      # outputs dist/app/ (served at /app/)
-npm run preview    # http://localhost:4173/app/ (app only; the website isn't served here)
+npm run build && cp -R website/. dist/
 ```
 
-The build goes to `dist/app/` so its files sit under `/app/` on the app's Vercel
-deployment. `vercel.json` sends deep links under `/app/` to `/app/index.html`.
+This is the `buildCommand` in `vercel.json`:
+
+- the app builds to `dist/app/`
+- the website is copied to the root of `dist/`
+- deep links under `/app/` fall back to `/app/index.html`
+
+The public Supabase URL and anon key come from `.env.production`. Vercel environment
+variables override them if you set any.

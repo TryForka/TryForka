@@ -14,12 +14,11 @@ const MIME: Record<string, string> = {
 };
 
 /**
- * Dev only: serves the marketing website's static files at the root of the dev server,
- * so the website and the app share one local origin (see docs/LOCAL_DEV.md).
- * Set FORKA_WEBSITE_DIR to point at the website repo; defaults to ./TryForka-mainWebsite.
+ * Dev only: serves the marketing website (./website) at the root of the dev server, so the
+ * website and the app share one local origin, as they do in production (see docs/LOCAL_DEV.md).
  */
 function serveWebsite(): Plugin {
-  const root = path.resolve(__dirname, process.env.FORKA_WEBSITE_DIR || 'TryForka-mainWebsite');
+  const root = path.resolve(__dirname, process.env.FORKA_WEBSITE_DIR || 'website');
   return {
     name: 'forka-serve-website',
     apply: 'serve',
