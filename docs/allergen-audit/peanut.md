@@ -1,0 +1,45 @@
+# Peanut: allergen audit
+
+Audited 2026-10-16 against the live catalog (790 recipes). 35 recipes are flagged as containing peanut and are hidden from anyone with this allergy.
+
+## Not flagged, but mentions a related word (0)
+
+None.
+
+## Flagged (35)
+
+- Apam balik (Peanut butter)
+- Baklava with spiced nuts (named or in the instructions)
+- Bang bang shrimp salad (Peanut butter)
+- Beef caldereta (Peanut butter)
+- Kung pao chicken (Peanuts)
+- Kung Pao shrimp (Peanuts)
+- Massaman beef curry (Peanuts)
+- Meang nem (Peanuts)
+- Mee goreng mamak (Peanuts)
+- Naem khao (Roasted peanut)
+- Napa cabbage with dried shrimp (Peanut oil)
+- Nasi lemak (Peanuts)
+- Noodle bowl salad (Ground nut oil)
+- Nutty chicken curry (Peanut butter)
+- Pad see ew (Peanut oil)
+- Pad Thai (Peanuts)
+- Panang chicken curry (Peanuts)
+- Papaya salad (Roasted peanut)
+- Paracuca (Unsalted peanuts)
+- Peanut butter cheesecake (Peanut cookies, Peanut butter, Peanut brittle)
+- Peanut butter cookies (Peanut butter)
+- Rocky road fudge (Peanut butter, Peanuts)
+- Shrimp and noodle salad with crispy shallots (Roasted peanut)
+- Shrimp stir-fry (Ground nut oil)
+- Shrimp with snow peas (Peanut oil)
+- Sichuan eggplant (Peanut oil)
+- Sichuan stir-fried long beans (Peanut oil)
+- Singapore noodles with shrimp (named or in the instructions)
+- Spicy Thai shrimp noodles (Peanuts)
+- Tangy carrot, cabbage and onion salad (Roasted peanut, Ground nut oil)
+- Thai pork and peanut curry (Peanut butter)
+- Vietnamese chicken salad (Peanuts)
+- Vietnamese grilled pork (Peanuts)
+- Vietnamese lamb shanks with sweet potatoes (Ground nut oil)
+- Vietnamese-style caramel pork (Ground nut oil)

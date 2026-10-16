@@ -1,0 +1,110 @@
+[
+  {
+    "n": 1,
+    "name": "Logged out /app/ redirects to /login.html",
+    "ok": true,
+    "detail": "http://localhost:5173/login.html"
+  },
+  {
+    "n": 6,
+    "name": "Wrong password shows the error, stays on login",
+    "ok": true,
+    "detail": "That email and password don't match. Try again or reset your password."
+  },
+  {
+    "n": 7,
+    "name": "Forgot password fires resetPasswordForEmail",
+    "ok": true,
+    "detail": "POST /auth/v1/recover redirect_to=http://localhost:5173/reset-password.html status=429 notice=\"\" error=\"Couldn't send the reset email. Try again in a minute.\""
+  },
+  {
+    "n": "7b",
+    "name": "Forgot password with empty email focuses the field and asks for it",
+    "ok": true,
+    "detail": "Enter your email above, then tap \"Forgot password?\" again."
+  },
+  {
+    "n": 9,
+    "name": "Google button starts OAuth with redirect_to /app/",
+    "ok": true,
+    "detail": "https://akufkhzzqwjhssmegvof.supabase.co/auth/v1/authorize?provider=google&redirect_to=http%3A%2F%2Flocalhost%3A5173%2Fapp%2F"
+  },
+  {
+    "n": "9b",
+    "name": "Apple button and Remember me are hidden on login",
+    "ok": true,
+    "detail": "apple=0 remember=0"
+  },
+  {
+    "n": 2,
+    "name": "Log in on login.html lands on the meal plan, signed in",
+    "ok": true,
+    "detail": "localStorage keys: sb-akufkhzzqwjhssmegvof-auth-token"
+  },
+  {
+    "n": 3,
+    "name": "Reload /app/ stays signed in",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "n": "3b",
+    "name": "Deep link under /app/ serves the app",
+    "ok": true,
+    "detail": "http://localhost:5173/app/some/deep/link"
+  },
+  {
+    "n": 4,
+    "name": "Signed in: login.html and signup.html bounce to /app/, home nav shows \"Open app\"",
+    "ok": true,
+    "detail": "login bounce=true signup bounce=true nav=\"Open app\" -> /app/"
+  },
+  {
+    "n": "4b",
+    "name": "Another page (pricing.html) also shows \"Open app\"",
+    "ok": true,
+    "detail": "Open app"
+  },
+  {
+    "n": 8,
+    "name": "Sign out lands on / and nav shows \"Log in\" again",
+    "ok": true,
+    "detail": "url=http://localhost:5173/ nav=\"Log in\" tokens=0"
+  },
+  {
+    "n": "7c",
+    "name": "reset-password.html without a session explains the link expired",
+    "ok": true,
+    "detail": "This link has expired or was already used. Request a new one from the log-in page."
+  },
+  {
+    "n": "5a",
+    "name": "Signup validation is inline (no alert), terms link -> terms.html",
+    "ok": true,
+    "detail": "Enter your name. | Enter your email. | Use at least 8 characters. | Agree to the terms to create your account."
+  },
+  {
+    "n": "5b",
+    "name": "Duplicate email shows \"already an account\" with a log in link",
+    "ok": true,
+    "detail": "There's already an account with that email. Log in instead."
+  },
+  {
+    "n": 5,
+    "name": "Signup on signup.html lands in onboarding; name typed on the website shows in the app",
+    "ok": true,
+    "detail": "forka.qa.weblink.phone.1792169885680@mailinator.com metadata.full_name=\"Phone Weblink Tester\" settings name=\"Phone Weblink Tester\""
+  },
+  {
+    "n": "7d",
+    "name": "reset-password.html updateUser then goes to the app",
+    "ok": true,
+    "detail": "forka.qa.weblink.phone.1792169885680@mailinator.com password changed"
+  },
+  {
+    "n": "8b",
+    "name": "Delete account (fresh test account) lands on / signed out",
+    "ok": true,
+    "detail": "forka.qa.weblink.phone.1792169885680@mailinator.com deleted; nav=\"Log in\""
+  }
+]
